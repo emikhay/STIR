@@ -117,12 +117,22 @@ int main(int argc, char **argv)
   const int num_axial_blocks =
     measured_data->get_proj_data_info_sptr()->get_scanner_sptr()->
     get_num_axial_blocks();
+
+    // katya start
+    //const int num_transaxial_crystals_per_block =
+    //measured_data->get_proj_data_info_sptr()->get_scanner_sptr()->
+    //get_num_transaxial_crystals_per_block();
+    //const int num_axial_crystals_per_block =
+    //measured_data->get_proj_data_info_sptr()->get_scanner_sptr()->
+    //get_num_axial_crystals_per_block();
+
     const int num_transaxial_crystals_per_block =
     measured_data->get_proj_data_info_sptr()->get_scanner_sptr()->
-    get_num_transaxial_crystals_per_block();
+    get_num_transaxial_crystals_per_block() * num_transaxial_blocks;
     const int num_axial_crystals_per_block =
     measured_data->get_proj_data_info_sptr()->get_scanner_sptr()->
-    get_num_axial_crystals_per_block();
+    get_num_axial_crystals_per_block() * num_axial_blocks;
+    // katya stop
 
 
     
