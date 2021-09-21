@@ -89,10 +89,11 @@ int main(int argc, char **argv)
     get_num_axial_blocks();
   const int num_transaxial_crystals_per_block =
     measured_data->get_proj_data_info_sptr()->get_scanner_sptr()->
-    get_num_transaxial_crystals_per_block();
+    get_num_transaxial_crystals_per_block() * num_transaxial_blocks;
   const int num_axial_crystals_per_block =
     measured_data->get_proj_data_info_sptr()->get_scanner_sptr()->
-    get_num_axial_crystals_per_block();
+    get_num_axial_crystals_per_block() * num_axial_blocks;
+  
     
   GeoData3D norm_geo_data(num_axial_crystals_per_block, num_transaxial_crystals_per_block/2, num_rings, num_detectors_per_ring);
 
