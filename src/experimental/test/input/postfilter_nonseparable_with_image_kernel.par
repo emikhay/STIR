@@ -1,6 +1,0 @@
-PostFilteringParameters :=
-  Postfilter type := Nonseparable Convolution Using Real DFT Image Filter  
-nonseparable convolution using real dft image filter:=
-  filter kernel := separable_filter_kernel_response.hv
-  End Nonseparable Convolution Using Real DFT Image Filter :=
-End PostFiltering Parameters:=
